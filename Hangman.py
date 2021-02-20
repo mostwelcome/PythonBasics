@@ -46,6 +46,7 @@ while not end_of_game:
     # Check if user is wrong.
     if guess not in chosen_word:
         # TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+        print("your guess is incorrect . You loose a life")
         lives -= 1
         if lives == 0:
             end_of_game = True
@@ -53,11 +54,3 @@ while not end_of_game:
 
     # Join all the elements in the list and turn it into a String.
     print(' '.join(display))
-
-    # Check if user has got all letters.
-    if "_" not in display:
-        end_of_game = True
-        print("You win.")
-
-    # TODO-2: - Import the stages from hangman_art.py and make this error go away.
-    print(stages[lives])
